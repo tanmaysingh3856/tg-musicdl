@@ -1,1 +1,1 @@
-worker: python -m GTS
+worker: python -m mbot

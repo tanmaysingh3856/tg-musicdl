@@ -16,3 +16,6 @@ A Simple Music Downloader Bot For Telegram with Youtube Music, Spotify & Deezer 
     <img src="https://img.shields.io/github/forks/slrub/GTS-MUSIC-DOWNLOADER?style=for-the-badge&logo=appveyor" alt="Forks">
     <img src="https://img.shields.io/github/stars/slrub/GTS-MUSIC-DOWNLOADER?style=for-the-badge&logo=appveyor" alt="Stars">
 </p>
+
+### Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/slrub/GTS-MUSIC-DOWNLOADER/)

@@ -1,4 +1,4 @@
-from GTS-MUSIC import gts
+from GTS import gts
 from os import sys,mkdir,path
 
 if __name__ == "__main__":

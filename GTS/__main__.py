@@ -1,4 +1,4 @@
-from GTS import gts
+from GTS import Gts
 from os import sys,mkdir,path
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 
 from yt_dlp import YoutubeDL
-from GTS import LOGGER,LOG_GROUP
+from mbot import LOGGER,LOG_GROUP
 from requests import get
 from asgiref.sync import sync_to_async
 

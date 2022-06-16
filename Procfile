@@ -1,1 +1,1 @@
-worker: python -m GTS-MUSIC
+worker: python -m GTS

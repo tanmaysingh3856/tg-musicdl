@@ -17,10 +17,6 @@ async def start(client,message):
             url="https://github.com/slrub/gts-music-downloader"),
         InlineKeyboardButton(text="Help",callback_data="helphome")
         ]]
-    if LOG_GROUP:
-
-        invite_link = await client.create_chat_invite_link(chat_id=(int(LOG_GROUP) if str(LOG_GROUP).startswith("-100") else LOG_GROUP))
-        reply_markup.append([InlineKeyboardButton("LOG Channel", url=invite_link.invite_link)])
     if message.chat.type != "private" and message.chat.id not in AUTH_CHATS and message.from_user.id not in SUDO_USERS:
         return await message.reply_text("This Bot Will Not Work In Groups Unless It's Authorized.",
                     reply_markup=InlineKeyboardMarkup(reply_markup))

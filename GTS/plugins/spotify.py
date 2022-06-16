@@ -1,7 +1,7 @@
-from GTS-MUSIC import AUTH_CHATS, LOGGER, gts,LOG_GROUP
+from GTS import AUTH_CHATS, LOGGER, gts,LOG_GROUP
 from pyrogram import filters
-from GTS-MUSIC.utils.mainhelper import parse_spotify_url,fetch_spotify_track,download_songs,thumb_down,copy
-from GTS-MUSIC.utils.ytdl import getIds,ytdl_down,audio_opt
+from GTS.utils.mainhelper import parse_spotify_url,fetch_spotify_track,download_songs,thumb_down,copy
+from GTS.utils.ytdl import getIds,ytdl_down,audio_opt
 import spotipy
 from os import mkdir
 from random import randint

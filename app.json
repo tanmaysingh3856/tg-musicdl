@@ -1,0 +1,56 @@
+{
+  "name": "GTS-MUSIC-DOWNLOADER",
+  "description": "A simple Telegram bot to download music.",
+  "keywords": [
+    "bot",
+    "music",
+    "music downloader"
+  ],
+  "repository": "https://github.com/SLRUB/GTS-MUSIC-DOWNLOADER/",
+  "website": "https://t.me/SHOTTA_FLOW_XD",
+  "success_url": "https://t.me/SHOTTA_FLOW_XD",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "The ID of the owner of the bot",
+      "value": ""
+    },
+    "SUDO_USERS": {
+      "description": "The ID of the sudo users of the bot",
+      "value": "",
+      "required": false
+    },
+    "AUTH_CHATS": {
+      "description": "The ID of the authorized chats of the bot",
+      "value": "",
+      "required": false
+    },
+    "LOG_GROUP": {
+      "description": "The ID of the group to log to",
+      "value": "",
+      "required": false
+    },
+    "SPOTIPY_CLIENT_SECRET": {
+      "description": "The client secret of the Spotify API",
+      "value": "02a755dd6ba74211a5e87aaff5b254f8"
+    },
+    "SPOTIPY_CLIENT_ID": {
+      "description": "The client ID of the Spotify API",
+      "value": "63c3bb80f15842d6a81500f89d3d04dd"
+    }
+  },
+  "buildpacks": [{
+    "url": "heroku/python"
+  }]
+}

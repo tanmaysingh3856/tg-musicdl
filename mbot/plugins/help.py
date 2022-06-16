@@ -11,7 +11,7 @@ from os import execvp,sys
 async def start(client,message):
     reply_markup = [[
         InlineKeyboardButton(
-            text="Bot Channel", url="https://t.me/shotta_flow_xd"),
+            text="Developer", url="https://t.me/shotta_flow_xd"),
         InlineKeyboardButton(
             text="Repo",
             url="https://github.com/slrub/gts-music-downloader"),

@@ -43,11 +43,11 @@
     },
     "SPOTIPY_CLIENT_SECRET": {
       "description": "The client secret of the Spotify API",
-      "value": "02a755dd6ba74211a5e87aaff5b254f8"
+      "value": "ac8842f915424ae5a6bb08d3ce06f8ad"
     },
     "SPOTIPY_CLIENT_ID": {
       "description": "The client ID of the Spotify API",
-      "value": "63c3bb80f15842d6a81500f89d3d04dd"
+      "value": "cef484dc498f4f379271eb312882d4e7"
     }
   },
   "buildpacks": [{

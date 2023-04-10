@@ -30,6 +30,6 @@ jobs:
           commit_message: 'auto fixes'
           commit_options: '--no-verify'
           repository: .
-          commit_user_name: pixsuvy
-          commit_user_email: pixsuvy@gmail.com
-          commit_author: pixsuvy <pixsuvy@gmail.com>
+          commit_user_name: tanmaysingh3856
+          commit_user_email: tanmaysingh3856@gmail.com
+          commit_author: tanmaysingh3856 <tanmaysingh3856@gmail.com>

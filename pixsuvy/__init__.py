@@ -32,7 +32,7 @@ LOG_GROUP = environ.get("LOG_GROUP", None)
 if LOG_GROUP:
     LOG_GROUP = int(LOG_GROUP)
     
-class Mbot(Client):
+class Pixsuvy(Client):
     def  __init__(self):
         name = self.__class__.__name__.lower()
         super().__init__(

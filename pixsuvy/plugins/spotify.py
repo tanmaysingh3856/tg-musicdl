@@ -1,4 +1,4 @@
-from pixsuvy import AUTH_CHATS, LOGGER, Mbot,LOG_GROUP
+from pixsuvy import AUTH_CHATS, LOGGER, Pixsuvy,LOG_GROUP
 from pyrogram import filters
 from pixsuvy.utils.mainhelper import parse_spotify_url,fetch_spotify_track,download_songs,thumb_down,copy
 from pixsuvy.utils.ytdl import getIds,ytdl_down,audio_opt
@@ -8,7 +8,7 @@ from random import randint
 
 client = spotipy.Spotify(auth_manager=spotipy.oauth2.SpotifyClientCredentials())
 
-@Mbot.on_message(filters.regex(r'https?://open.spotify.com[^\s]+') & filters.private | filters.regex(r'https?://open.spotify.com[^\s]+') & filters.command(["spotify","spotdl"]) | filters.private & filters.regex(r"spotify:") & filters.chat(AUTH_CHATS))
+@Pixsuvy.on_message(filters.regex(r'https?://open.spotify.com[^\s]+') & filters.private | filters.regex(r'https?://open.spotify.com[^\s]+') & filters.command(["spotify","spotdl"]) | filters.private & filters.regex(r"spotify:") & filters.chat(AUTH_CHATS))
 async def spotify_dl(_,message):
     link = message.matches[0].group(0)
     m = await message.reply_text(f"**Gathering info from your [link]({link}).**")

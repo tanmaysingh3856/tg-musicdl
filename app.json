@@ -6,9 +6,9 @@
     "music",
     "music downloader"
   ],
-  "repository": "https://github.com/SLRUB/GTS-MUSIC-DOWNLOADER",
-  "website": "https://t.me/SHOTTA_FLOW_XD",
-  "success_url": "https://t.me/SHOTTA_FLOW_XD",
+  "repository": "https://github.com/pixsuvy/tg-musicdl",
+  "website": "https://telegram.dog/pixsuvy",
+  "success_url": "https://telegram.dog/pixsuvy",
   "env": {
     "API_ID": {
       "description": "Your Telegram API ID",

@@ -4,17 +4,17 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 from pyrogram.raw.functions import Ping
-from pixsuvy import LOG_GROUP, OWNER_ID, SUDO_USERS, Mbot,AUTH_CHATS
+from pixsuvy import LOG_GROUP, OWNER_ID, SUDO_USERS, Pixsuvy,AUTH_CHATS
 from os import execvp,sys
 
-@Mbot.on_message(filters.command("start"))
+@Pixsuvy.on_message(filters.command("start"))
 async def start(client,message):
     reply_markup = [[
         InlineKeyboardButton(
-            text="Developer", url="https://t.me/shotta_flow_xd"),
+            text="Developer", url="https://t.me/pixsuvy"),
         InlineKeyboardButton(
             text="Repo",
-            url="https://github.com/slrub/gts-music-downloader"),
+            url="https://github.com/pixsuvy/tg-musicdl"),
         InlineKeyboardButton(text="Help",callback_data="helphome")
         ]]
     if message.chat.type != "private" and message.chat.id not in AUTH_CHATS and message.from_user.id not in SUDO_USERS:
@@ -23,16 +23,16 @@ async def start(client,message):
     return await message.reply_text(f"Hello {message.from_user.first_name}, I'm a PIXSUVY TG MUSIC DOWNLOADER Bot. I Currently Support Download from Youtube.",
                     reply_markup=InlineKeyboardMarkup(reply_markup))
 
-@Mbot.on_message(filters.command("restart") & filters.chat(OWNER_ID) & filters.private)
+@Pixsuvy.on_message(filters.command("restart") & filters.chat(OWNER_ID) & filters.private)
 async def restart(_,message):
     await message.delete()
     execvp(sys.executable,[sys.executable,"-m","pixsuvy"])
 
-@Mbot.on_message(filters.command("log") & filters.chat(SUDO_USERS))
+@Pixsuvy.on_message(filters.command("log") & filters.chat(SUDO_USERS))
 async def send_log(_,message):
     await message.reply_document("bot.log")
 
-@Mbot.on_message(filters.command("ping"))
+@Pixsuvy.on_message(filters.command("ping"))
 async def ping(client,message):
     start = datetime.now()
     await client.send(Ping(ping_id=0))
@@ -46,7 +46,7 @@ HELP = {
 }
 
 
-@Mbot.on_message(filters.command("help"))
+@Pixsuvy.on_message(filters.command("help"))
 async def help(_,message):
     button = [
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
@@ -55,14 +55,14 @@ async def help(_,message):
     await message.reply_text(f"Hello **{message.from_user.first_name}**, I'm **PIXSUVY TG MUSIC DOWNLOADER**.\nI'm Here to download your music.",
                         reply_markup=InlineKeyboardMarkup(button))
 
-@Mbot.on_callback_query(filters.regex(r"help_(.*?)"))
+@Pixsuvy.on_callback_query(filters.regex(r"help_(.*?)"))
 async def helpbtn(_,query):
     i = query.data.replace("help_","")
     button = InlineKeyboardMarkup([[InlineKeyboardButton("Back",callback_data="helphome")]])
     text = f"Help for **{i}**\n\n{HELP[i]}"
     await query.message.edit(text = text,reply_markup=button)
 
-@Mbot.on_callback_query(filters.regex(r"helphome"))
+@Pixsuvy.on_callback_query(filters.regex(r"helphome"))
 async def help_home(_,query):
     button = [
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP

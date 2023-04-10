@@ -20,7 +20,7 @@ async def start(client,message):
     if message.chat.type != "private" and message.chat.id not in AUTH_CHATS and message.from_user.id not in SUDO_USERS:
         return await message.reply_text("This Bot Will Not Work In Groups Unless It's Authorized.",
                     reply_markup=InlineKeyboardMarkup(reply_markup))
-    return await message.reply_text(f"Hello {message.from_user.first_name}, I'm a GTS Music Downloader Bot. I Currently Support Download from Youtube.",
+    return await message.reply_text(f"Hello {message.from_user.first_name}, I'm a PIXSUVY TG MUSIC DOWNLOADER Bot. I Currently Support Download from Youtube.",
                     reply_markup=InlineKeyboardMarkup(reply_markup))
 
 @Mbot.on_message(filters.command("restart") & filters.chat(OWNER_ID) & filters.private)

@@ -1,4 +1,4 @@
-# GTS Music Downloader
+# PIXSUVY TG MUSIC DOWNLOADER
 A Simple Music Downloader Bot For Telegram with Youtube Music, Spotify & Deezer Support.
 
 <p align="center">

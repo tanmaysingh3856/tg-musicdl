@@ -1,1 +1,1 @@
-worker: python -m mbot
+worker: python -m pixsuvy

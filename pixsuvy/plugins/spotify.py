@@ -1,7 +1,7 @@
-from mbot import AUTH_CHATS, LOGGER, Mbot,LOG_GROUP
+from pixsuvy import AUTH_CHATS, LOGGER, Mbot,LOG_GROUP
 from pyrogram import filters
-from mbot.utils.mainhelper import parse_spotify_url,fetch_spotify_track,download_songs,thumb_down,copy
-from mbot.utils.ytdl import getIds,ytdl_down,audio_opt
+from pixsuvy.utils.mainhelper import parse_spotify_url,fetch_spotify_track,download_songs,thumb_down,copy
+from pixsuvy.utils.ytdl import getIds,ytdl_down,audio_opt
 import spotipy
 from os import mkdir
 from random import randint

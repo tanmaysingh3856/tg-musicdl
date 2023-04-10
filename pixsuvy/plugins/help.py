@@ -4,7 +4,7 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 from pyrogram.raw.functions import Ping
-from mbot import LOG_GROUP, OWNER_ID, SUDO_USERS, Mbot,AUTH_CHATS
+from pixsuvy import LOG_GROUP, OWNER_ID, SUDO_USERS, Mbot,AUTH_CHATS
 from os import execvp,sys
 
 @Mbot.on_message(filters.command("start"))
@@ -26,7 +26,7 @@ async def start(client,message):
 @Mbot.on_message(filters.command("restart") & filters.chat(OWNER_ID) & filters.private)
 async def restart(_,message):
     await message.delete()
-    execvp(sys.executable,[sys.executable,"-m","mbot"])
+    execvp(sys.executable,[sys.executable,"-m","pixsuvy"])
 
 @Mbot.on_message(filters.command("log") & filters.chat(SUDO_USERS))
 async def send_log(_,message):

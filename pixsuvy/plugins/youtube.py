@@ -1,8 +1,8 @@
 from os import mkdir
 from random import randint
-from mbot import AUTH_CHATS, LOG_GROUP, LOGGER, Mbot
+from pixsuvy import AUTH_CHATS, LOG_GROUP, LOGGER, Mbot
 from pyrogram import filters
-from mbot.utils.ytdl import getIds,ytdl_down,audio_opt,thumb_down
+from pixsuvy.utils.ytdl import getIds,ytdl_down,audio_opt,thumb_down
 
 @Mbot.on_message(filters.regex(r'(https?://)?.*you[^\s]+') & filters.private | filters.command(["yt","ytd","ytmusic"]) & filters.regex(r'https?://.*you[^\s]+') & filters.chat(AUTH_CHATS))
 async def _(_,message):
